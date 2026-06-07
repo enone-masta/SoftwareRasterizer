@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install Linux system packages
         if: runner.os == 'Linux'
@@ -35,7 +35,7 @@ jobs:
             libgl1-mesa-dev
 
       - name: Checkout vcpkg
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: microsoft/vcpkg
           path: vcpkg
