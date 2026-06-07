@@ -26,12 +26,14 @@
     {
       "name": "dev",
       "displayName": "Build Dev",
-      "configurePreset": "dev-config"
+      "configurePreset": "dev-config",
+      "configuration": "Debug"
     },
     {
       "name": "release",
       "displayName": "Build Release",
-      "configurePreset": "release-config"
+      "configurePreset": "release-config",
+      "configuration": "Release"
     }
   ]
 }
