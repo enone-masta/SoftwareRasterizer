@@ -1,7 +1,7 @@
 @echo off
 cls
 
-echo === Running ===
+echo === SoftwareRasterizer run ===
 
 if exist ".\build\dev\SoftwareRasterizer.exe" (
     ".\build\dev\SoftwareRasterizer.exe"

@@ -26,20 +26,26 @@ Requirements:
 
 - CMake 3.24 or newer
 - A C++20 compiler
+- vcpkg with `VCPKG_ROOT` set
 
-Configure and build:
+Dependencies are declared in `vcpkg.json`.
+
+Configure and build with CMake presets:
 
 ```sh
-cmake -S . -B build
-cmake --build build --config Debug
+cmake --preset dev
+cmake --build --preset dev
 ```
 
-On Windows, the helper scripts can also be used:
+On Windows, the helper scripts split configure, build, and run steps:
 
 ```bat
+.\!configure.bat
 .\!build.bat
 .\!run.bat
 ```
+
+Run `!configure.bat` again after changing CMake or vcpkg files.
 
 ## Roadmap
 
