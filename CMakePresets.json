@@ -2,7 +2,7 @@
   "version": 6,
   "configurePresets": [
     {
-      "name": "dev",
+      "name": "dev-config",
       "displayName": "Dev Debug",
       "binaryDir": "${sourceDir}/build/dev",
       "cacheVariables": {
@@ -11,13 +11,27 @@
         "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
         "VCPKG_MANIFEST_MODE": "ON"
       }
+    },
+    {
+      "name": "release-config",
+      "displayName": "Release",
+      "inherits": "dev-config",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
     {
       "name": "dev",
       "displayName": "Build Dev",
-      "configurePreset": "dev"
+      "configurePreset": "dev-config"
+    },
+    {
+      "name": "release",
+      "displayName": "Build Release",
+      "configurePreset": "release-config"
     }
   ]
 }
